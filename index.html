@@ -1,62 +1,88 @@
-```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>رضوانه ❤️</title>
+  <!-- اضافه کردن فونت زیبا -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
-    body{
-      margin:0;
-      padding:0;
-      background:#fff5f7;
-      font-family:tahoma;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      text-align:center;
-      color:#444;
+    body {
+      margin: 0;
+      padding: 20px 0;
+      background: linear-gradient(135deg, #fff5f7 0%, #ffe3ec 100%);
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      color: #444;
     }
 
-    .card{
-      background:white;
-      padding:40px;
-      border-radius:25px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-      max-width:700px;
-      width:90%;
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 30px;
+      box-shadow: 0 15px 40px rgba(255, 92, 138, 0.15);
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+      overflow: hidden;
     }
 
-    h1{
-      font-size:48px;
-      margin-bottom:10px;
-      color:#ff5c8a;
+    /* استایل عکس پروفایل (رضوانه) */
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
     }
 
-    .heart{
-      font-size:60px;
-      animation:beat 1.2s infinite;
-      display:inline-block;
+    h1 {
+      font-size: 36px;
+      margin: 10px 0;
+      color: #ff5c8a;
     }
 
-    p{
-      font-size:20px;
-      line-height:2;
-      margin-top:25px;
+    .heart {
+      font-size: 40px;
+      animation: beat 1.2s infinite;
+      display: inline-block;
+      margin-bottom: 10px;
     }
 
-    .footer{
-      margin-top:35px;
-      font-size:14px;
-      color:#999;
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 15px 0;
+      color: #555;
     }
 
-    @keyframes beat{
-      0%{transform:scale(1);}
-      50%{transform:scale(1.15);}
-      100%{transform:scale(1);}
+    /* استایل عکس خانوادگی */
+    .family-img {
+      width: 100%;
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #bbb;
+      border-top: 1px dashed #eee;
+      padding-top: 15px;
+    }
+
+    @keyframes beat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
@@ -64,31 +90,33 @@
 <body>
 
   <div class="card">
-
+    <!-- عکس رضوانه خانم -->
+    <img src="rezi.jpg" alt="رضوانه" class="profile-img">
+    
     <div class="heart">❤️</div>
 
     <h1>رضوانه</h1>
 
     <p>
-      اگر الان این صفحه رو می‌بینی،
-      یعنی بابات خیلی دوستت داشته که
-      از وقتی فقط ۶ ماهت بوده
+      اگر الان این صفحه رو می‌بینی،<br>
+      یعنی بابات خیلی دوستت داشته که<br>
+      از وقتی فقط ۶ ماهت بوده<br>
       برات یه گوشه کوچیک توی اینترنت ساخته ❤️
     </p>
 
-    <p>
-      امیدوارم همیشه سالم،
-      خوشحال،
-      قوی
-      و پر از آرامش باشی.
+    <p style="font-weight: bold; color: #ff7096;">
+      امیدوارم همیشه سالم، خوشحال، قوی و پر از آرامش باشی.
     </p>
 
+    <!-- عکس خانوادگی -->
+    <img src="rezi-razi.jpg" alt="خانواده" class="family-img">
+
     <div class="footer">
-      ساخته شده با عشق توسط بابا
+      ساخته شده با عشق توسط بابا <br>
+      بهار ۱۴۰۵ ✨
     </div>
 
   </div>
 
 </body>
 </html>
-```
