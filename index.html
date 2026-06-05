@@ -1,122 +1,313 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>رضوانه ❤️</title>
-  <!-- اضافه کردن فونت زیبا -->
+
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    * {
       margin: 0;
-      padding: 20px 0;
-      background: linear-gradient(135deg, #fff5f7 0%, #ffe3ec 100%);
-      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      color: #444;
+      padding: 30px 15px;
+      background:
+        radial-gradient(circle at top left, #ffd6e7, transparent 30%),
+        radial-gradient(circle at bottom right, #ffe8f1, transparent 30%),
+        linear-gradient(135deg, #fff0f5 0%, #ffe3ec 100%);
+      position: relative;
+    }
+
+    /* حباب ها */
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.35);
+      animation: float 10s infinite ease-in-out;
+      backdrop-filter: blur(5px);
+    }
+
+    .bubble:nth-child(1) {
+      width: 120px;
+      height: 120px;
+      top: 10%;
+      left: 8%;
+    }
+
+    .bubble:nth-child(2) {
+      width: 80px;
+      height: 80px;
+      bottom: 12%;
+      right: 10%;
+      animation-delay: 2s;
+    }
+
+    .bubble:nth-child(3) {
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      left: 15%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
     }
 
     .card {
-      background: white;
-      padding: 30px;
-      border-radius: 30px;
-      box-shadow: 0 15px 40px rgba(255, 92, 138, 0.15);
-      max-width: 500px;
-      width: 90%;
+      width: 100%;
+      max-width: 560px;
+      padding: 35px;
+      border-radius: 35px;
+
+      background: rgba(255, 255, 255, 0.6);
+
+      backdrop-filter: blur(15px);
+
+      box-shadow:
+        0 10px 40px rgba(255, 92, 138, 0.18),
+        inset 0 1px 0 rgba(255,255,255,0.7);
+
+      text-align: center;
+
       position: relative;
-      overflow: hidden;
+      z-index: 10;
+
+      border: 1px solid rgba(255,255,255,0.5);
     }
 
-    /* استایل عکس پروفایل (رضوانه) */
+    .top-glow {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: rgba(255, 192, 203, 0.4);
+      border-radius: 50%;
+      filter: blur(50px);
+      top: -60px;
+      right: -40px;
+      z-index: -1;
+    }
+
     .profile-img {
-      width: 150px;
-      height: 150px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid #fff;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      margin-bottom: 15px;
+
+      border: 6px solid white;
+
+      box-shadow:
+        0 10px 25px rgba(255, 92, 138, 0.25);
+
+      transition: 0.4s;
     }
 
-    h1 {
-      font-size: 36px;
-      margin: 10px 0;
-      color: #ff5c8a;
+    .profile-img:hover {
+      transform: scale(1.05) rotate(2deg);
     }
 
     .heart {
-      font-size: 40px;
-      animation: beat 1.2s infinite;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.8;
-      margin: 15px 0;
-      color: #555;
-    }
-
-    /* استایل عکس خانوادگی */
-    .family-img {
-      width: 100%;
-      border-radius: 15px;
-      margin-top: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    .footer {
-      margin-top: 30px;
-      font-size: 13px;
-      color: #bbb;
-      border-top: 1px dashed #eee;
-      padding-top: 15px;
+      margin-top: 18px;
+      font-size: 42px;
+      animation: beat 1.3s infinite;
     }
 
     @keyframes beat {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: 42px;
+      color: #ff4f85;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: #d66b90;
+      margin-top: 5px;
+      font-size: 15px;
+    }
+
+    p {
+      margin-top: 22px;
+      font-size: 18px;
+      line-height: 2.1;
+      color: #555;
+    }
+
+    .special-text {
+      margin-top: 25px;
+      font-size: 20px;
+      color: #ff5c8a;
+      font-weight: bold;
+    }
+
+    .family-img {
+      width: 100%;
+      margin-top: 30px;
+      border-radius: 22px;
+
+      box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+
+      transition: 0.4s;
+    }
+
+    .family-img:hover {
+      transform: scale(1.02);
+    }
+
+    .footer {
+      margin-top: 28px;
+      padding-top: 18px;
+
+      border-top: 1px dashed rgba(255, 92, 138, 0.2);
+
+      color: #999;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .sparkle {
+      position: absolute;
+      font-size: 20px;
+      opacity: 0.7;
+      animation: twinkle 3s infinite;
+    }
+
+    .sparkle1 {
+      top: 15%;
+      right: 18%;
+    }
+
+    .sparkle2 {
+      bottom: 18%;
+      left: 14%;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes twinkle {
+      0% {
+        opacity: 0.2;
+        transform: scale(0.8);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+
+      100% {
+        opacity: 0.2;
+        transform: scale(0.8);
+      }
+    }
+
+    @media(max-width:600px) {
+
+      .card {
+        padding: 25px;
+      }
+
+      .profile-img {
+        width: 140px;
+        height: 140px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  <div class="sparkle sparkle1">✨</div>
+  <div class="sparkle sparkle2">🌸</div>
+
   <div class="card">
-    <!-- عکس رضوانه خانم -->
+
+    <div class="top-glow"></div>
+
     <img src="rezi.jpg" alt="رضوانه" class="profile-img">
-    
-    <div class="heart">❤️</div>
+
+    <div class="heart">💖</div>
 
     <h1>رضوانه</h1>
 
+    <div class="subtitle">
+      دختر کوچولوی بابا ✨
+    </div>
+
     <p>
-      اگر الان این صفحه رو می‌بینی،<br>
-      یعنی بابات خیلی دوستت داشته که<br>
-      از وقتی فقط ۶ ماهت بوده<br>
-      برات یه گوشه کوچیک توی اینترنت ساخته ❤️
+      اگر الان این صفحه رو می‌بینی،
+      یعنی بابات اون‌قدر دوستت داشته
+      که از وقتی فقط ۶ ماهت بوده،
+      برات یه تیکه کوچیک از اینترنت رو
+      تبدیل به خاطره کرده 💕
     </p>
 
-    <p style="font-weight: bold; color: #ff7096;">
-      امیدوارم همیشه سالم، خوشحال، قوی و پر از آرامش باشی.
-    </p>
+    <div class="special-text">
+      همیشه بخند،
+      همیشه بدرخش،
+      همیشه خودت باش 🌸
+    </div>
 
-    <!-- عکس خانوادگی -->
     <img src="rezi-razi.jpg" alt="خانواده" class="family-img">
 
     <div class="footer">
-      ساخته شده با عشق توسط بابا <br>
-      بهار ۱۴۰۵ ✨
+      ساخته شده با عشق بی‌نهایت توسط بابا ❤️ <br>
+      بهار ۱۴۰۵
     </div>
 
   </div>
 
 </body>
+
 </html>
+```
